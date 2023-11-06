@@ -42,6 +42,7 @@ nav a:visited{
     padding-bottom:20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+
 }
 
 .card{
@@ -50,6 +51,8 @@ nav a:visited{
     align-content:center;
     justify-content:center;
     flex-basis: 450px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .pricing{
@@ -84,9 +87,12 @@ nav a:visited{
     justify-content: space-between;
    } 
 
+
    .nav_links{
     display:inline-flex;
+    flex-direction:row;
    }
+
 
    .card{
     display:inline-flex;
@@ -108,6 +114,65 @@ nav a:visited{
     position:sticky;
     top:0;
    }
+}
+
+@media print{
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image:none;
+    }
+
+    body >header{
+        display:block;
+        align-items:center;
+        margin: 0 auto;
+    }
+
+    #logo{
+        display:block;
+        margin: 0 auto;
+    }
+
+    
+    .nav_links{
+        display:flex;
+        justify-content: space-between;
+
+
+    }
+
+    .card{
+        display:inline-flex;
+        border: 2px #45ADDD solid;
+        flex-direction:column;
+        justify-content:center;
+        flex-basis:325px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+
+
+       }
+    
+       .pricing{
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content:center;
+        flex-wrap: nowrap;
+        align-items:flex-end;
+       }
+
+       #gallery,.gallery{
+        display:none;
+       }
+
+
+       .card li:nth-child(2)::after{
+        content:"👍";
+        margin-left:1px;
+       }
+
 }
 
 @media (prefers-reduced-motion:reduce){
