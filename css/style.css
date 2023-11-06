@@ -137,7 +137,7 @@ nav a:visited{
     
     .nav_links{
         display:flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
 
     }
